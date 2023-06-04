@@ -1,0 +1,264 @@
+.discover-head {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 5px;
+  color: white;
+}
+
+.discover-head ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-bottom:5px;
+}
+
+
+.discover-head ul li {
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.active {
+  color: rgb(141, 255, 141);
+  transform: scale(1.2);
+  transition: .4s ease-in-out;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: rgb(141, 255, 141);
+}
+
+.discover-container {
+  width: 100%;
+  height: 100vh;
+  padding: 5px 10px;
+  margin-top: 25px;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: scroll;
+  position: relative;
+}
+.SongsDescription-container{
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.discover-boxes {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: 15px;
+}
+.discover-boxes h2{
+  color: white;
+  width: 100%;
+  margin-left: 15px;
+  font-size: 26px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;;
+}
+.discover-box {
+  position: relative;
+  width: 150px;
+  height: 180px;
+  color: black;
+  padding: 3px;
+  margin: 15px 10px;
+  box-shadow: rgba(99, 127, 95, 0.35) 0px 5px 15px;
+  color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.discover-box-extra {
+  width: 140px;
+  height: 200px;
+}
+
+.discover-box .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: opacity 0.3s ease;
+}
+
+.discover-box:hover .overlay {
+  opacity: 1;
+}
+
+.discover-box:hover {
+  transform: scale(1.1);
+}
+
+.discover-box img {
+  width: 100%;
+  height: 78%;
+  border-radius: 8px;
+}
+
+
+.discover-box .overlay a {
+  color: #fffbfb;
+  font-size: 40px;
+  margin-top: -10px;
+}
+
+.discover-box .overlay a i {
+  color: rgb(112, 247, 112);
+}
+
+.discover-box h3 {
+  font-size: 16px;
+  height: 20px;
+  font-weight: bold;
+  overflow: hidden;
+  font-weight: 400;
+}
+
+.discover-box p {
+  font-size: 12px;
+  font-weight: lighter;
+  overflow: hidden;
+  height: 20px;
+}
+
+.discover-player {
+  width: 75vw;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-45%);
+  z-index: 3;
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.description-head {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-left: 30px;
+  padding: 10px;
+}
+
+.description-head .description-img {
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+  padding: 5px;
+}
+
+.description-head .description-img img {
+  width: 240px;
+  height: 240px;
+  border-radius: 5%;
+
+}
+
+.description-head .description-details {
+  height: 250px;
+  padding: 10px;
+}
+
+.description-details h2 {
+  color: white;
+  font-size: 30px;
+  margin: 50px 15px 0px 15px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;;
+}
+
+.description-details p {
+  width: 250px;
+  height: 20px;
+  overflow: hidden;
+  color: white;
+  font-size: 15px;
+  margin: 0px 15px 25px 18px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;;
+  text-overflow: ellipsis;
+}
+
+.description-details .icons {
+  color: white;
+  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+.icons .play-button{
+  width: 100px;
+  height: 40px;
+  border-radius: 5%;
+  background-color:  green;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  margin-left: -25px;
+  padding: 1px;
+ 
+} 
+.icons .icons{
+  font-size: 20px;
+  margin-left: 20px;
+}
+.discover-search-bar{
+  margin-bottom: -20px;
+}
+
+
+
+@media screen and (max-width: 481px) {
+
+.discover-boxes {
+  margin-left: -30px;
+}
+
+.discover-boxes h2 {
+  margin-left: 15px;
+  font-size: 26px;
+}
+
+.discover-boxes .discover-box {
+  width: 100px;
+  height: 130px;
+  padding: 3px;
+  margin: 10px 10px;
+}
+
+.discover-boxes .discover-box h3 {
+  font-size: 10px;
+  height: 12px;
+}
+
+.discover-boxes .discover-box p {
+  font-size: 8px;
+  height: 20px;
+}
+}

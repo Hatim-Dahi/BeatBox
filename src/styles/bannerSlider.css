@@ -1,0 +1,26 @@
+
+/*banner slider*/
+.bannerslider-container{
+    width: 100%;
+    height: 41vh;
+    display: flex;
+    margin-top: -20px;
+}
+.bannerslider-container .slider-img{
+    width: 100%;
+    height: 40vh;
+}
+
+
+@media screen and (max-width: 481px) {
+  .bannerslider-container{
+    width: 100%;
+    height: 26vh;
+    display: flex;
+    margin-top: -20px;
+}
+.bannerslider-container .slider-img{
+    width: 100%;
+    height: 25vh;
+}  
+}

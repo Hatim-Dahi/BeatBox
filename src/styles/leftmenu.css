@@ -1,0 +1,338 @@
+.left-menu {
+    width: 250px;
+    height: 100%;
+    min-height: 100vh;
+    background: rgb(34, 34, 39, 0.6);
+    backdrop-filter: blur(3px);
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    padding: 25px 20px;
+}
+
+.logo-container {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container i:nth-of-type(1) {
+    font-size: 20px;
+}
+
+.logo-container i:nth-of-type(2) {
+    font-size: 20px;
+}
+
+.logo-container h2 {
+    font-size: 26px;
+}
+
+.search-bar {
+    width: 40%; /* Change this to the desired width */
+    margin: 0 auto; /* Center horizontally */
+    text-align: center; /* Center contents inside the div */
+    height: 35px;
+    background: rgb(255, 255, 255);
+    position: relative;
+    margin-top: 20px;
+    color: #8484;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.search-bar input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    color: rgb(4, 4, 4);
+    font-size: 16px;
+    padding: 7px;
+    padding-left: 25px;
+    font-weight: 300;
+}
+
+.Menu-container {
+    margin: 15px 0;
+}
+
+.Menu-container .title {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.Menu-container ul {
+    width: 100%;
+    padding: 0;
+}
+
+.Menu-container ul li {
+    list-style: none;
+    margin: 5px 0;
+    width: 100%;
+    padding: 5px;
+}
+
+.Menu-container ul li button{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    border: none;
+    background-color: transparent;
+}
+
+.Menu-container ul li button i {
+    margin-right: 7px;
+    font-size: 18px;
+}
+
+.Menu-container ul li button:hover,
+.Menu-container ul li:active {
+    color: #49e12e;
+    transition: 0.4s;
+    text-decoration: underline;
+}
+
+.play-List-container {
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.play-List-container .name-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.play-List-container .name-container p {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.play-List-container .name-container i {
+    cursor: pointer;
+    color: white;
+}
+
+.play-List-Scroll {
+    margin: 15px 0;
+    height: 260px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-bottom: 1px solid grey;
+}
+
+.play-List-Scroll ul {
+    width: 100%;
+    padding: 0;
+}
+
+.play-List-Scroll ul li {
+    list-style: none;
+    margin: 5px 0;
+    width: 100%;
+    padding: 5px;
+}
+
+.play-List-Scroll ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.play-List-Scroll ul li .musicNote:hover {
+    color: #49e12e;
+    transition: 0.4s;
+}
+
+.play-List-Scroll ul li .playlist-name:hover {
+    color: #49e12e;
+    transition: 0.4s;
+}
+
+.play-List-Scroll ul li a i {
+    margin-right: 7px;
+    font-size: 18px;
+}
+
+.play-List-Scroll ul li .trash:hover {
+    color: #49e12e;
+    transition: 0.4s;
+}
+
+.play-List-Scroll ul li .trash {
+    margin-left: auto;
+}
+
+.play-List-Scroll ul li p {
+    font-size: 16px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline;
+}
+
+.track-list {
+    padding-top: 20px;
+}
+
+.track-list .track-top {
+    display: flex;
+    align-items: center;
+}
+
+.track-list .track-top img {
+    width: 50px !important;
+}
+
+.track-list .track-top p {
+    margin-left: 15px;
+    color: white;
+    font-size: 16px;
+}
+
+.track-list .track-top p span {
+    display: block;
+    font-size: 12px;
+    color: #848484;
+}
+
+.track-list .track-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.track-list .track-bottom i {
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.track-list .track-bottom i:hover {
+    color: #49e12e;
+    transition: 0.4s;
+}
+
+.track-list .track-bottom input {
+    position: relative;
+    height: 5px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: rgb(255, 255, 255, 0.1);
+    appearance: none;
+}
+
+.track-list .track-bottom input::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    background: #49e12e;
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    z-index: 2;
+    transition: width 250ms linear;
+}
+
+.track-list .track-bottom input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 20px;
+    border-radius: 20px;
+    background: #f1f1f1;
+    border: 2px solid #000;
+    cursor: pointer;
+    position: relative;
+    margin: -2px 0 0 0;
+    z-index: 3;
+    box-sizing: border-box;
+    transition: all 250ms linear;
+}
+
+
+/*Responsive leftmenu*/
+@media screen and (max-width: 1100px) {
+    .left-menu {
+        min-width: 64px;
+        width: 64px;
+    }
+    .logo-container h2{
+        display: none;
+    
+    }
+    .logo-container i:nth-of-type(1) {
+        font-size: 36px;
+    }
+    .logo-container i:nth-of-type(2) {
+        display: none;
+    }
+    .Menu-container .menu-list-name{
+        display: none;
+    }
+    .left-menu .play-List-container {
+        display: none;
+    }
+    
+    .left-menu .Menu-container ul li a span {
+        display: none;
+    }
+
+    .left-menu .Menu-container ul li {
+        margin: 25px 0;
+    }
+    .Menu-container .title {
+        margin-left: -4px;
+    }
+    .left-menu .Menu-container button i{
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .left-menu {
+        min-width: 54px;
+        width: 54px;
+    }
+
+    .logo-container i:nth-of-type(1) {
+        font-size: 26px;
+    }
+    .logo-container h2 {
+        margin-left: 20px;
+    }
+
+}
+@media screen and (max-width: 480px) {
+    .left-menu {
+        min-width: 35px;
+        width: 35px;
+    }
+    .Menu-container .title {
+        display: none;
+    }
+    .left-menu .Menu-container ul li {
+        margin-left: -8px;
+    }
+    .left-menu .Menu-container button i{
+        font-size: 18px;
+    }
+    .logo-container i:nth-of-type(1) {
+        margin-left: -5px;
+        font-size: 28px;
+    }
+    
+}

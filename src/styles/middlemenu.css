@@ -1,0 +1,567 @@
+.mainContainer {
+    width: 100%;
+    height: 100vh;
+    flex-grow: 1;
+    z-index: 1;
+    background: rgb(34, 34, 39, 0.6);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+.banner {
+    height: 300px;
+    margin-top: 10px;
+    position: relative;
+    background-color: #fff;
+}
+
+.banner .bannerImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.Banner .bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+}
+
+.content .breadCrump {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .breadCrump P {
+    color: #848484;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.content .breadCrump P span {
+    color: #f1f1f1;
+}
+
+.content .breadCrump i {
+    color: #f1f1f1;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.content .artist {
+    margin-top: auto;
+    color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content .artist .left .name {
+    display: flex;
+    align-items: center;
+}
+
+.content .artist .left .name h2 {
+    font-size: 50px;
+}
+
+.content .artist .left .name img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.content .artist .left p {
+    font-size: 14px;
+}
+
+.content .artist .left p i {
+    margin-right: 6px;
+}
+
+.content .artist .left p span {
+    color: #848484;
+    margin-left: 6px;
+}
+
+.content .artist .right {
+    display: flex;
+    align-items: center;
+}
+
+.content .artist .right a {
+    text-decoration: none;
+    padding: 10px 30px;
+    font-size: 18px;
+    color: #f1f1f1;
+    border-radius: 100vw;
+    margin: 0 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.content .artist .right a i {
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.content .artist .right a:nth-child(1) {
+    background: #39aa24;
+}
+
+.content .artist .right a:nth-child(2) {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-right: 0;
+}
+
+
+.mainContainer .menuList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: #2c2c2c;
+}
+
+.menuList ul {
+    display: flex;
+    align-items: center;
+}
+
+.menuList ul li {
+    list-style: none;
+    margin: 0 25px;
+    position: relative;
+}
+
+.mainContainer .menuList ul li a {
+    text-decoration: none;
+    color: #848484;
+}
+
+.mainContainer .menuList ul li::before {
+    position: absolute;
+    content: "";
+    bottom: -20px;
+    left: 10px;
+    width: 0px;
+    height: 5px;
+    border-radius: 5px;
+    background: #39aa24;
+}
+
+.mainContainer .menuList ul li:hover::before,
+.mainContainer .menuList ul li.active::before {
+    width: 20px;
+    transition: width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.mainContainer .menuList ul li:hover a,
+.mainContainer .menuList ul li.active a {
+    color: #39aa24;
+    transition: 0.3s ease;
+}
+
+.mainContainer .menuList p {
+    color: #f1f1f1;
+    font-size: 14px;
+}
+
+.mainContainer p i {
+    font-size: 12px;
+    margin-right: 6px;
+}
+
+.mainContainer p span {
+    margin-left: 6px;
+    color: #848484;
+}
+
+
+/*Audio list css*/
+
+.AudioList {
+    padding: 10px 2px;
+}
+
+.headlines {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.headlines p {
+    font-size: 16px;
+    margin-top: 25px;
+    margin-right: 25px;
+    color: #49e12e;
+}
+
+.headlines h2 {
+    color: white;
+    margin-top: 15px;
+    margin-left: 30px;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+}
+
+.headlines .link {
+    text-decoration: none;
+}
+
+.AudioList .title {
+    font-size: 18px;
+    color: #f1f1f1;
+}
+
+.AudioList .title span {
+    margin-left: 5px;
+    color: #848484;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.AudioList .songsContainer {
+    height: 87vh;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.AudioList .songs {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #848484;
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px;
+    padding-bottom: 5px;
+}
+
+.AudioList .songs.active,
+.AudioList .songs.active .song .section .songName .songSpan {
+    color: #f1f1f1 !important;
+}
+
+.AudioList .songs .count {
+    margin-right: 10px;
+}
+
+.AudioList .songs .song {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 5px;
+}
+
+.AudioList .songs .song .imgBox {
+    width: 45px;
+    min-width: 45px;
+    height: 45px;
+    border-radius: 0.5em;
+    background-color: #848484;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.AudioList .songs .song .imgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.AudioList .songs .song .section {
+    display: flex;
+    width: 100%;
+}
+
+.AudioList .songs .song .section .songName {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.AudioList .songs .song .section .songName .songSpan {
+    margin-left: 0;
+    font-size: 12px;
+}
+
+.AudioList .songs .song .section .hits {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+.AudioList .songs .song .section .hits p {
+    margin: 0 20px;
+}
+
+.AudioList .songs .song .section .hits p:nth-child(1) {
+    margin-left: 0;
+}
+
+.AudioList .songs .song .section .hits .favourite i {
+    color: #49e12e !important;
+    filter: drop-shadow(0px 0px 4px #49e12e);
+}
+
+.AudioList .songs:hover,
+.AudioList .songs:hover .song .section .songName .songSpan {
+    color: #f1f1f1;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.AudioList .songs:hover .song .imgBox img {
+    transform: scale(1.2);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.Slider-x {
+    width: 75vw;
+    height: 30vh;
+    margin: 10px 35px;
+}
+
+.Banner-Slider-x {
+    width: 75vw;
+    height: 40vh;
+    margin: 10px 35px;
+}
+
+.responsive-menubar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    margin-bottom: -10px;
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.responsive-menubar .left {
+    display: flex;
+    margin: 10px;
+}
+
+.responsive-menubar .left i:nth-child(1) {
+    font-size: 30px;
+    color: rgb(28, 244, 60);
+}
+
+.responsive-menubar .left h2 {
+    margin: 2px 8px;
+    font-size: 20px;
+}
+
+.responsive-menubar .right {
+    display: flex;
+    margin: 12px;
+}
+.responsive-menubar .right .res-link{
+    color: white;
+}
+.responsive-menubar .right i {
+    margin: 0px 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    margin-top: 15px;
+    padding-top: 10px;
+    margin-left: -30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  .dropdown-content .drop-link i{
+    color: white;
+  }
+  .dropdown-content a {
+    display: block;
+    padding: 10px 0;
+    color: white;
+    background-color: black;
+    text-decoration: none;
+  }
+
+@media screen and (max-width: 1035px) {
+    .discover-head ul li .link {
+        font-size: 14px;
+        margin-left: -10px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .discover-head ul li .link {
+        font-size: 12px;
+        margin-left: -15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .discover-head ul li .link {
+        font-size: 10px;
+        margin-left: -20px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .mainContainer {
+        min-width: 380px;
+    }
+
+    .content {
+        padding: 10px 15px;
+    }
+
+    .content .breadCrump P {
+        font-size: 12px;
+    }
+
+    .content .breadCrump i {
+        font-size: 14px;
+    }
+
+    .content .artist .left .name h2 {
+        font-size: 25px;
+    }
+
+    .content .artist .right a {
+        padding: 5px 15px;
+        font-size: 12px;
+        margin: 0 10px;
+    }
+
+    .menuList ul li {
+        margin: 0 5px;
+    }
+
+    .mainContainer .menuList ul li a {
+        font-size: 14px;
+    }
+
+    .mainContainer .menuList p {
+        font-size: 12px;
+    }
+
+    .mainContainer .menuList p i {
+        font-size: 10px;
+    }
+
+    .mainContainer .menuList p span {
+        margin-left: 0px;
+        font-size: 10px;
+        text-align: center;
+        display: block;
+    }
+
+    .mainContainer .menuList {
+        padding: 10px 15px;
+    }
+
+    .AudioList {
+        padding: 10px 5px;
+    }
+
+    .AudioList .songs .song .section {
+        flex-direction: column;
+    }
+
+    .AudioList .songs .song .section .songName {
+        width: 100%;
+    }
+
+    .AudioList .songs .song .section .hits {
+        margin-left: 0;
+        margin-top: 5px;
+        justify-content: space-between;
+    }
+
+    .discover-head ul li .link {
+        font-size: 8px;
+        margin-left: -25px;
+    }
+}
+
+@media screen and (max-width: 481px) {
+    .rightContainer {
+        display: none;
+    }
+
+    .left-menu {
+        display: none;
+    }
+
+    .search-bar {
+        display: none;
+    }
+
+    .responsive-menubar {
+        display: inline-flex;
+    }
+
+    .discover-head ul li .link {
+        font-size: 7px;
+        margin-left: -28px;
+    }
+    
+    .Slider-x {
+        width: 92vw;
+        height: 18vh;
+    }
+
+    .Banner-Slider-x {
+        width: 80vw;
+        height: 24vh;
+    }
+
+    .headlines p {
+        font-size: 12px;
+        margin-top: 8px;
+    }
+
+    .headlines h2 {
+        margin-left: 30px;
+        font-size: 16px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+            'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+            sans-serif;
+    }
+
+    .headlines .link {
+        text-decoration: none;
+    }
+
+   
+}
